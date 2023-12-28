@@ -20,3 +20,9 @@ glib-compile-schemas .
 cd
 gsettings list-recursively org.gnome.shell.extensions.{NAME}
 ```
+
+**Connect to eduroam**
+
+```
+nmcli connection modify <wifi-name> 802-1x.phase1-auth-flags 32
+```
