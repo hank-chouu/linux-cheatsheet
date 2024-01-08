@@ -26,3 +26,17 @@ gsettings list-recursively org.gnome.shell.extensions.{NAME}
 ```
 nmcli connection modify <wifi-name> 802-1x.phase1-auth-flags 32
 ```
+
+**Connect to RStudio Server**
+
+first, start rstudio server on the remote machine:
+
+```
+sudo rstudio-server start
+```
+
+then, on the local machine:
+
+```
+ssh -f -N -L <local-port>:localhost:<remote-port> <remote-host>
+```
