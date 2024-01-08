@@ -34,3 +34,9 @@ ssh -f -N -L <local-port>:localhost:<remote-port> <remote-host>
 ```
 
 the default rstudio server port is 8787
+
+### Kill a background ssh
+
+```
+pkill ssh
+```
