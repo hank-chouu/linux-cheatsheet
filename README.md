@@ -2,15 +2,15 @@
 
 The resources are mostly for Arch-Linux based distos.
 
-**Connect iPhone to Linux**
+### Connect iPhone to Linux
 
 https://itsfoss.com/iphone-antergos-linux/
 
-**Convert HEIC in Linux**
+### Convert HEIC in Linux
 
 https://www.baeldung.com/linux/view-heic-images
 
-**Add extension to gsettings schemas**
+### Add extension to gsettings schemas
 
 ```
 mkdir -p .local/share/glib-2.0/schemas
@@ -21,22 +21,16 @@ cd
 gsettings list-recursively org.gnome.shell.extensions.{NAME}
 ```
 
-**Connect to eduroam**
+### Connect to eduroam
 
 ```
 nmcli connection modify <wifi-name> 802-1x.phase1-auth-flags 32
 ```
 
-**Connect to RStudio Server**
-
-first, start rstudio server on the remote machine:
-
-```
-sudo rstudio-server start
-```
-
-then, on the local machine:
+### Port forwarding via ssh
 
 ```
 ssh -f -N -L <local-port>:localhost:<remote-port> <remote-host>
 ```
+
+the default rstudio server port is 8787
